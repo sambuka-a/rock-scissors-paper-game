@@ -1,0 +1,56 @@
+//colors primary
+$scissorsGradientOne: hsl(39, 89%, 49%);
+$scissorsGradientTwo: hsl(40, 84%, 53%);
+$scissorsGradientOpacity:hsl(39, 89%, 49%, 0.4);
+
+$paperGradientOne: hsl(230, 89%, 62%);
+$paperGradientTwo: hsl(230, 89%, 65%);
+$paperGradientOpacity: hsl(230, 89%, 62%, 0.4);
+
+$rockGradientOne:hsl(349, 71%, 52%);
+$rockGradientTwo: hsl(349, 70%, 56%);
+$rockGradientOpacity:hsl(349, 71%, 52%, 0.4);
+
+$lizardGradientOne: hsl(261, 73%, 60%);
+$lizardGradientTwo: hsl(261, 72%, 63%);
+
+$cyan: hsl(189, 59%, 53%), hsl(189, 58%, 57%);
+
+//colors neutral
+$darkText: hsl(229, 25%, 31%);
+$scoreText: hsl(229, 64%, 46%);
+$headerOutline: hsl(217, 16%, 45%);
+
+//Background
+$radialGradient: hsl(214, 47%, 23%), hsl(237, 49%, 15%);
+
+//font
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+$jozefinFont: 'Josefin Sans', sans-serif;
+
+//font weight
+$fw-light: 400;
+$fw-regular: 600;
+$fw-bold: 700;
+
+//font sizes
+$fs-xs: 10px;
+$fs-sm: 18px;
+$fs-reg: 28px; 
+
+//breakpoints
+$sm: 763px;
+$lg: 1024px;
+
+@mixin breakpoint($point) {
+    @if $point == sm {
+        @media(min-width: $sm) {
+            @content
+        }
+    }
+    @if $point == lg {
+        @media(min-width: $lg) {
+            @content
+        }
+    }
+}

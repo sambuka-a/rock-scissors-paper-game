@@ -1,0 +1,50 @@
+@import '../../styles/variables.scss';
+
+.header {
+    display: flex;
+    height: 120px;
+    margin: 50px;
+    max-width: 70%;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    text-transform: uppercase;
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: $fs-sm;
+        font-weight: $fw-bold;
+        flex: 5;
+        padding: 10px;
+        cursor: pointer;
+
+        > span {
+            margin: 3px 5px;
+        }
+    }
+
+    .score {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: $fs-xs;
+        font-weight: $fw-light;
+        flex: 1;
+        padding: 10px;
+        color: $darkText;
+        background-color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+        margin: 12px;
+
+        > span {
+            margin-top: 5px;
+            font-size: $fs-reg;
+            font-weight: $fw-bold;
+        }
+    }
+}

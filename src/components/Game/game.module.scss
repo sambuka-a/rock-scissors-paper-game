@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+
+.game {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 920px;
+    color: $headerOutline;
+    height: 100vh;
+    font-family: $jozefinFont;
+
+    .footer {
+        display: flex;
+        max-width: 100%;
+        width: 100%;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin: 30px;
+
+        > button {
+            padding: 12px 35px;
+            border: 1px solid white;
+            border-radius: 5px;
+            background: transparent;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+            &:hover {
+                background: white;
+                color: $darkText;
+            }
+        }
+    }
+}
