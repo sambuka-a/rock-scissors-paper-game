@@ -11,7 +11,7 @@
     color: white;
     text-transform: uppercase;
 
-    .buttons {
+    .logo {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -21,8 +21,9 @@
         padding: 10px;
         cursor: pointer;
 
-        > span {
-            margin: 3px 5px;
+        > img {
+            height: 100px;
+            width: 160px;
         }
     }
 

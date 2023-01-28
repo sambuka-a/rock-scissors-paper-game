@@ -1,13 +1,14 @@
 import styles from './header.module.scss'
 
-const Header = ({onUserChose, score, cScore}) => {
+const Header = ({onLogoClick, score, cScore}) => {
 
   return (
     <div className={styles.header}>
-        <div className={styles.buttons}>
-            <span onClick={(e) => {onUserChose(e.target.getAttribute("value"))}} value="paper">Paper</span>
-            <span onClick={(e) => {onUserChose(e.target.getAttribute("value"))}} value="scissors">Scissors</span>
-            <span onClick={(e) => {onUserChose(e.target.getAttribute("value"))}} value="rock">Rock</span>
+        <div className={styles.logo}>
+            <img 
+              src='/assets/logo.svg' alt='logo'
+              onClick={() => onLogoClick()}
+            />
         </div>
         <div className={styles.score}>
             <div>You:</div>

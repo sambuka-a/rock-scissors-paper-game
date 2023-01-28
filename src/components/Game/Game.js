@@ -4,6 +4,7 @@ import styles from './game.module.scss'
 import Header from '../Header/Header'
 import StartScreen from '../StartScreen/StartScreen';
 import GameFlow from '../GameFlow/GameFlow'
+import Modal from '../Modal/Modal';
 
 const Game = () => {
     const [playerChoice, setPlayerChoice] = useState()
@@ -11,10 +12,14 @@ const Game = () => {
     const [playerScore, setPlayerScore] = useState(0)
     const [computerScore, setComputerScore] = useState(0)
     const [winner, setWinner] = useState(null)
+    const [modalOpen, setModalOpen] = useState(false)
 
     const handlePlayAgain = () => {
         setPlayerChoice(null)
         setComputerChoice(null)
+    }
+
+    const handleResetGame = () => {
         setPlayerScore(0)
         setComputerScore(0)
     }
@@ -67,12 +72,18 @@ const Game = () => {
 
   return (
     <div className={styles.game}>
-        <Header 
-            onUserChose={handleUserChose}
+        <Header
+            onLogoClick={handleResetGame}
             score={playerScore}
             cScore={computerScore}
         />
-        {!playerChoice && <StartScreen/>}
+        {!playerChoice && 
+            <StartScreen
+                onUserChose={handleUserChose}
+                score={playerScore}
+                cScore={computerScore} 
+            />}
+
         {playerChoice && 
         <GameFlow
             user={playerChoice}
@@ -81,8 +92,12 @@ const Game = () => {
             onPlayAgainButton={handlePlayAgain}
         />}
         <div className={styles.footer}>
-            <button onClick={() => {handlePlayAgain()}}>Rules</button>
+            <button onClick={() => {setModalOpen(true)}}>Rules</button>
         </div>
+        <Modal
+            handleClose={() => setModalOpen(false)}
+            modalOpen={modalOpen}
+        />
     </div>
   )
 }
