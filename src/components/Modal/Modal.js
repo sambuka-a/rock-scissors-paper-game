@@ -26,13 +26,20 @@ function Modal({ modalOpen, handleClose }) {
                 nodeRef={nodeRef}
             >
                 <div className={styles.modal} ref={nodeRef}>
-                    <div className={styles.rules}>
-                        <img src='/assets/image-rules.svg' alt='rules'/>
+                    <div className={styles.wrapper}>
+                        <div className={styles.title}>
+                            <p>RULES</p>
+                            <img 
+                                onClick={handleClose} 
+                                className={styles.closeBtn} 
+                                src='/assets/icon-close.svg' 
+                                alt='close'
+                            />
+                        </div>
+                        <div className={styles.rules}>
+                            <img src='/assets/image-rules.svg' alt='rules'/>
+                        </div>
                     </div>
-                    <button onClick={handleClose} className={styles.closeBtn}>
-                        Close
-                    </button>
-                  
                 </div>
             </CSSTransition>
         </RulesPortal>

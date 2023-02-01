@@ -6,9 +6,9 @@
     margin: 50px;
     max-width: 70%;
     width: 100%;
-    border: 1px solid white;
+    border: 1px solid $colorLight;
     border-radius: 10px;
-    color: white;
+    color: $colorLight;
     text-transform: uppercase;
 
     .logo {
@@ -37,8 +37,8 @@
         flex: 1;
         padding: 10px;
         color: $darkText;
-        background-color: white;
-        border: 1px solid white;
+        background-color: $colorLight;
+        border: 1px solid $colorLight;
         border-radius: 5px;
         margin: 12px;
 

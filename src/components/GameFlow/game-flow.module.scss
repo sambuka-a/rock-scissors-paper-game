@@ -4,7 +4,7 @@
     display: flex;
     max-width: 100%;
     text-transform: uppercase;
-    color: white;
+    color: $colorLight;
     font-size: $fs-sm;
 }
 
@@ -41,6 +41,7 @@
             }
 
             > button {
+                cursor: pointer;
                 margin-top: 10px;
                 padding: 12px 30px;
                 border-radius: 7px;
@@ -65,7 +66,7 @@
             border-radius: 50%;
 
             .imgWrapper {
-                background: white;
+                background: $colorLight;
                 padding: 25px;
                 border-radius: 50%;
 

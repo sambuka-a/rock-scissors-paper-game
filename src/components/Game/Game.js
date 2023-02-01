@@ -22,6 +22,7 @@ const Game = () => {
     const handleResetGame = () => {
         setPlayerScore(0)
         setComputerScore(0)
+        setPlayerChoice()
     }
 
     const handleUserChose = (value) => {

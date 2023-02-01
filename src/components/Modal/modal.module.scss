@@ -11,7 +11,25 @@
     overflow: hidden;
     z-index: 999;
     padding: 40px 20px 20px;
-    pointer-events: none;
+
+  .wrapper {
+    background: $colorLight;
+    padding: 20px;
+    border-radius: 10px;
+
+
+    .title {
+      display: flex;
+      color: $headerOutline;
+      justify-content: space-between;
+      font-size: $fs-sm;
+      font-weight: $fw-regular;
+      font-family: $jozefinFont;
+    }
+
+    .closeBtn {
+      cursor: pointer;
+    }
 
     .rules {
       width: 370px;
@@ -21,9 +39,9 @@
       justify-content: center;
       margin: 30px;
       padding: 40px;
-      background-color: aliceblue;
+      background-color: $colorLight;
       border-radius: 20px;
-
+    }
   }
 }
 
