@@ -4,7 +4,7 @@ import { CSSTransition } from "react-transition-group";
 
 import styles from './modal.module.scss'
 
-function Modal({ modalOpen, handleClose }) {
+function Modal({ children, modalOpen, handleClose }) {
     const nodeRef = useRef(null)
     useEffect(() => {
         const closeOnEsc = (e) => e.key === 'Escape' ? handleClose() : null;

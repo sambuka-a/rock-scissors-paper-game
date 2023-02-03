@@ -2,28 +2,35 @@
 
 .header {
     display: flex;
-    height: 120px;
-    margin: 50px;
-    max-width: 70%;
-    width: 100%;
+    width: 90%;
     border: 1px solid $colorLight;
     border-radius: 10px;
     color: $colorLight;
     text-transform: uppercase;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 85px;
+
+    @include breakpoint(sm) {
+        height: 120px;
+        width: 90%;
+    }
 
     .logo {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        font-size: $fs-sm;
-        font-weight: $fw-bold;
+        align-items: center;
         flex: 5;
-        padding: 10px;
+        padding: 5px;
         cursor: pointer;
 
         > img {
-            height: 100px;
-            width: 160px;
+            height: 75px;
+            width: 135px;
+
+            @include breakpoint(sm) {
+                height: 110px;
+                width: 130px;
+            }
         }
     }
 

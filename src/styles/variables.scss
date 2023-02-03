@@ -20,6 +20,8 @@ $headerOutline: hsl(217, 16%, 45%);
 $colorLight: hsl(220, 18%, 93%);
 
 //Background
+$linearGradientOne: hsl(214, 47%, 23%);
+$linearGradientTwo: hsl(237, 49%, 15%);
 $radialGradient: hsl(214, 47%, 23%), hsl(237, 49%, 15%);
 
 //font
@@ -34,7 +36,8 @@ $fw-bold: 700;
 //font sizes
 $fs-xs: 10px;
 $fs-sm: 18px;
-$fs-reg: 28px; 
+$fs-reg: 28px;
+$fs-sb: 48px; 
 
 //breakpoints
 $sm: 763px;

@@ -1,22 +1,31 @@
 @import '../../styles/variables.scss';
 
+
+
 .game {
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    max-width: 920px;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: $sm;
     color: $headerOutline;
     height: 100vh;
     font-family: $jozefinFont;
 
+    @include breakpoint(sm) {
+        max-width: $lg;
+    }
+
     .footer {
         display: flex;
-        max-width: 100%;
-        width: 100%;
-        justify-content: flex-end;
-        align-items: flex-end;
+        justify-content: center;
+        //align-items: flex-end;
         margin: 30px;
+
+        @include breakpoint(sm) {
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
 
         > button {
             padding: 12px 35px;
