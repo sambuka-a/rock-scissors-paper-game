@@ -13,7 +13,7 @@ const StartScreen = ({user = 'paper', computer='paper', winner, onPlayAgainButto
           </div>  
           <motion.div 
             className={`${styles.icon} ${user === 'paper' ? styles.paper : user === 'rock' ? styles.rock : styles.scissors}`}
-            animate={winner === 'You win' && { rotate: [180, 360], scale: [2, 1]}}
+            animate={winner === 'You win' && { rotate: [-180, 180, 0, -180, 180, 0, -180, 180, 0], scale: [1, 2, 1, 1, 2, 1, 1, 2, 1]}}
           >
             <div className={styles.imgWrapper}>
               <img src={`assets/icon-${user}.svg`} alt='paper icon'/>
@@ -37,7 +37,7 @@ const StartScreen = ({user = 'paper', computer='paper', winner, onPlayAgainButto
           </div>
           <motion.div 
             className={`${styles.icon} ${computer === 'paper' ? styles.paper : computer === 'rock' ? styles.rock : styles.scissors}`}
-            animate={winner === 'You lose' && { rotate: [ 180, 360], scale: [2, 1]}}
+            animate={winner === 'You lose' && { y: [0, 20, 0, 15, 0, 10, 0, 5, 0] }}
           >
             <div className={styles.imgWrapper}>
               <img src={`assets/icon-${computer}.svg`} alt='scissors icon'/>
