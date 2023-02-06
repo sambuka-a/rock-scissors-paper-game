@@ -83,7 +83,8 @@ const Game = () => {
                 onUserChose={handleUserChose}
                 score={playerScore}
                 cScore={computerScore} 
-            />}
+            />
+        }
 
         {playerChoice && 
         <GameFlow
@@ -91,7 +92,9 @@ const Game = () => {
             computer={computerChoice}
             winner={winner}
             onPlayAgainButton={handlePlayAgain}
-        />}
+            />
+        }
+
         <div className={styles.footer}>
             <button onClick={() => {setModalOpen(true)}}>Rules</button>
         </div>

@@ -42,8 +42,8 @@
             .icon {
                 display: flex;
                 flex-direction: column;
-                margin: 5px 30px;
-                padding: 20px;
+                margin: 5px 20px;
+                padding: 15px;
                 border-radius: 50%;
 
                 @include breakpoint(sm) {
@@ -56,9 +56,8 @@
                     border-radius: 50%;
 
                     img {
-                        width: 60px;
-                        height: 60px;                               
-                        padding: 5px;
+                        width: 45px;
+                        height: 45px;                               
 
                         @include breakpoint(sm) {
                             width: 130px;
